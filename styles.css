@@ -1,0 +1,243 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #ff6f61;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards 0.5s; /* delayed fadeIn */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    opacity: 0;
+    animation: slideInFromTop 1s ease-out forwards 1s;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.hero .btn {
+    background-color: white;
+    color: #ff6f61;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e55d54;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    animation: fadeIn 1.5s ease-in-out forwards 2s;
+}
+
+.feature-item {
+    background-color: #ffcccb;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    animation: slideInFromLeft 1s ease-out forwards 2s;
+}
+
+.feature-item:nth-child(2) {
+    animation: slideInFromTop 1s ease-out forwards 2s;
+}
+
+.feature-item:nth-child(3) {
+    animation: slideInFromRight 1s ease-out forwards 2s;
+}
+
+/* Product List */
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards 3s;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 2px solid #ff6f61;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards 4s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-item h2 {
+    margin-top: 10px;
+    color: #ff6f61;
+}
+
+.product-item p {
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-item .btn {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.product-item .btn:hover {
+    background-color: #e55d54;
+}
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards 3s;
+}
+
+form label {
+    display: block;
+    margin: 10px 0;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e55d54;
+}
+
+/* Footer */
+footer {
+    background-color: #ff6f61;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
